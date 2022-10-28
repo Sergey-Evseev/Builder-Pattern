@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*Product: представляет объект, который должен быть создан.В данном случае все части объекта заключены в списке parts.
+Builder: определяет интерфейс для создания различных частей объекта Product
+ConcreteBuilder: конкретная реализация Buildera.Создает объект Product и определяет интерфейс для доступа к нему
+Director: распорядитель - создает объект, используя объекты Builder
+Рассмотрим применение паттерна на примере выпечки хлеба. Как известно, даже обычный хлеб включает множество компонентов. 
+Хлеб может иметь различную комбинацию компонентов: ржаной и пшеничной муки, соли, пищевых добавок. 
+И нам надо обеспечить выпечку разных сортов хлеба. Для разных сортов хлеба может варьироваться конкретный набор компонентов, 
+не все компоненты могут использоваться.И для этой задачи применим паттерн Builder:*/
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -43,25 +53,7 @@ namespace BreadBaking
         }
     }
 
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            // содаем объект пекаря
-            Baker baker = new Baker();
-            // создаем билдер для ржаного хлеба
-            BreadBuilder builder = new RyeBreadBuilder();
-            // выпекаем
-            Bread ryeBread = baker.Bake(builder);
-            Console.WriteLine(ryeBread.ToString());
-            // оздаем билдер для пшеничного хлеба
-            builder = new WheatBreadBuilder();
-            Bread wheatBread = baker.Bake(builder);
-            Console.WriteLine(wheatBread.ToString());
-
-            Console.Read();
-        }
-    }
+    
     // абстрактный класс строителя
     abstract class BreadBuilder
     {
@@ -121,5 +113,25 @@ namespace BreadBaking
         {
             this.Bread.Additives = new Additives { Name = "улучшитель хлебопекарный" };
         }
-    }   
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // содаем объект пекаря
+            Baker baker = new Baker();
+            // создаем билдер для ржаного хлеба
+            BreadBuilder builder = new RyeBreadBuilder();
+            // выпекаем
+            Bread ryeBread = baker.Bake(builder);
+            Console.WriteLine(ryeBread.ToString());
+            // оздаем билдер для пшеничного хлеба
+            builder = new WheatBreadBuilder();
+            Bread wheatBread = baker.Bake(builder);
+            Console.WriteLine(wheatBread.ToString());
+
+            Console.Read();
+        }
+    }
 }
