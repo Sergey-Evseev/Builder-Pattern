@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.2092
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Builder Pattern", "Builder Pattern\Builder Pattern.csproj", "{02890593-3450-44EB-8AB6-907ED97A8384}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BreadBaking", "BreadBaking\BreadBaking.csproj", "{C286EF2F-811C-4AEA-9286-319BBE800384}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{02890593-3450-44EB-8AB6-907ED97A8384}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02890593-3450-44EB-8AB6-907ED97A8384}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02890593-3450-44EB-8AB6-907ED97A8384}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C286EF2F-811C-4AEA-9286-319BBE800384}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C286EF2F-811C-4AEA-9286-319BBE800384}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C286EF2F-811C-4AEA-9286-319BBE800384}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C286EF2F-811C-4AEA-9286-319BBE800384}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
